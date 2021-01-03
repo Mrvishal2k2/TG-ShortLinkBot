@@ -30,3 +30,6 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites Support !!
 * Don't be a copy cat !!
 * Good to see if you give me credits if you are using !!
 * This is only for personal !! Don't make a Bot channel Business with this !!
+
+# Credits ❤️
+* Mahesh Malekar For his Awesome GpLinks Opensource
