@@ -26,7 +26,7 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites Support !!
  If API_KEY is not provided Still u can use with [Da.gd](https://da.gd) Shortlink !!
  
 # All rights reserved !!
-* Rangers stay from Kang !!
+* Kangers stay from Kang !!
 * Don't be a copy cat !!
 * Good to see if you give me credits if you are using !!
 * This is only for personal !! Don't make a Bot channel Business with this !!
