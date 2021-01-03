@@ -1,0 +1,40 @@
+{
+    "name": "ShortLink_Bot",
+    "description": "Make short link by using Cuttly API key",
+    "keywords": [
+        "telegram",
+        "cuttly"
+    ],
+    "website": "https://github.com/MrVishal2k2/ShortLink-bot",
+    "repository": "https://github.com/MrVishal2k2/ShortLink-bot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "API_KEY": {
+            "description": "(Not Compulsory) Cutt.ly API See Readme for further details",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
