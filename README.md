@@ -22,13 +22,13 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites Support !!
 * `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
  You can also get it from [UseTGXBot](https://t.me/UseTGXBot)
 * `API_KEY`: (Not Compulsory) Create [Cutt.ly](https://cutt.ly/) account then get this value from settings (I prefer desktop site 🙂)
- If API_KEY is not provided Still u can use with [Da.gd](https://da.gd) Shortlink !!
+ If API_KEY is not provided Still u can use with [Da.gd](https://da.gd) Shortlink (Preferably this is best 😅) !!
  
 ## All rights reserved !!
 * Kangers stay away from Kang !!
 * Don't be a copy cat !!
 * Good to see if you give me credits if you are using !!
-* This is only for personal !! Don't make a Bot channel Business with this !!
+* This is only for personal use !! Don't make a Bot channel Business with this !!
 
 # Credits ❤️
-* Mahesh Malekar For his Awesome [GPLinks](https://github.com/Mahesh0253/GPlink-bot)  Opensource
+* [Mahesh Malekar](https://github.com/Mahesh0253) For his Awesome [GPLinks](https://github.com/Mahesh0253/GPlink-bot)  Opensource
