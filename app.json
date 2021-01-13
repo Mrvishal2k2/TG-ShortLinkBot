@@ -5,8 +5,8 @@
         "telegram",
         "cuttly"
     ],
-    "website": "https://github.com/MrVishal2k2/ShortLink-bot",
-    "repository": "https://github.com/MrVishal2k2/ShortLink-bot",
+    "website": "https://cyberstockofficial.blogspot.com",
+    "Update Channel": "@Cyber_stock_official",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token",
