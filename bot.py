@@ -8,10 +8,12 @@ from os import environ
 # Moved Back to asyncio-dev branch of pyrogram
 from pyrogram import (
     Client,
-    filters as Filters,
+    filters as Filters
+    )
+from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup
-)
+    )
 import pyshorteners
 
 API_ID = environ.get('API_ID')
