@@ -1,4 +1,4 @@
-#pyrogram
+#pyrogram2
 https://github.com/Mrvishal2k2/pyrogram-old/archive/asyncio-dev.zip 
 tgcrypto
 pyshorteners
