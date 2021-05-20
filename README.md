@@ -35,8 +35,8 @@ help - ask help
 ```
 
 ### Support:
-* Join channel
-[![Join BotDunia Channel](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/BotDunia)
+* Join BotDunia channel
+<a href="https://t.me/BotDunia"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
 * Join Support Group
 <a href="https://t.me/BotDuniaSupport"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a>
 
