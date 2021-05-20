@@ -12,6 +12,16 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites and inline Sup
 #### The Simple Way
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+#### Hard Way (VPS)
+* This is just a demo of commands to use
+```
+git clone https://github.com/Mrvishal2k2/TG-ShortLinkBot
+virtualenv -p /usr/bin/python3 venv
+. ./venv/bin/activate
+pip install -r requirements.txt
+python3 bot.py
+```
+
 ### Developer 
 * Telegram [Mrvishal2k2](https://t.me/Mrvishal_2k2) 
 * You can checkout my bots At [BotDunia](https://t.me/BotDunia)
