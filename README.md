@@ -1,6 +1,9 @@
 # TG-BitlyBot
 Make a short link by using [Bit.ly](https://bit.ly/) API key Or With [Da.gd](https://da.gd) If BITLY_KEY isn't present
 
+* **Language:** [Python3](https://www.python.org)
+* **Library:** [Pyrogram](https://docs.pyrogram.org)
+
 ### Installation
 
 #### Easy Way 
@@ -25,6 +28,23 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites and inline Sup
  If BITLY_KEY is not provided Still u can use with [Da.gd](https://da.gd) Shortlink !!
 * `OWNER`: (Not mandatory) Owner's Username without @
 
+## Commands:
+```
+start - start the bot
+help - ask help 
+```
+
+### Support Group:
+<a href="https://t.me/BotDuniaSupport"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a>
+
+### Follow on:
+<p align="left">
+<a href="https://github.com/Mrvishal2k2"><img src="https://img.shields.io/badge/GitHub-Follow%20on%20GitHub-inactive.svg?logo=github"></a>
+</p>
+<p align="left">
+<a href="https://twitter.com/Mrvishal2k2"><img src="https://img.shields.io/badge/Twitter-Follow%20on%20Twitter-informational.svg?logo=twitter"></a>
+</p>
+
 ## All rights reserved !!
 * Kangers stay away from Kang !!
 * Don't be a copy cat !!
@@ -33,3 +53,4 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites and inline Sup
 
 # Credits ❤️
 * [Mahesh Malekar](https://github.com/Mahesh0253) For his Awesome [GPLinks](https://github.com/Mahesh0253/GPlink-bot)  Opensource
+* And everyone in this Journey 
