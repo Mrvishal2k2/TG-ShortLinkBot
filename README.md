@@ -64,6 +64,6 @@ help - ask help
 * Good to see if you give me credits if you are using !!
 * This is only for personal use !! Don't make a Bot channel Business with this !!
 
-# Credits ❤️
+## Credits 
 * [Mahesh Malekar](https://github.com/Mahesh0253) For his Awesome [GPLinks](https://github.com/Mahesh0253/GPlink-bot)  Opensource
 * And everyone in this Journey 
