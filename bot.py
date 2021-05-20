@@ -55,7 +55,7 @@ def get_shortlink(url):
     shortened_url = None
     Err = None
     try:
-       if API_KEY:
+       if BITLY_KEY:
            ''' Bittly Shorten'''
            s = Shortener(api_key=API_KEY)
            shortened_url = s.bitly.short(url)
