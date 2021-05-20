@@ -7,6 +7,8 @@ This is only for personal use Dont use this for ur bot channel business 😂
 Thanks to Mahesh Malekar for his Gplinks Bot !!
 '''
 
+# Bitly Bot
+
 import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
