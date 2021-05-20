@@ -1,15 +1,15 @@
 {
-    "name": "ShortLink_Bot",
-    "description": "Make short link by using Cuttly API key",
+    "name": "Bitly_Bot",
+    "description": "Make short link by using Bitly API key",
     "keywords": [
         "telegram",
-        "cuttly"
+        "Bitly"
     ],
-    "website": "https://github.com/MrVishal2k2/ShortLink-bot",
-    "repository": "https://github.com/MrVishal2k2/ShortLink-bot",
+    "website": "https://github.com/MrVishal2k2",
+    "repository": "https://github.com/Mrvishal2k2/TG-ShortLinkBot/tree/Bitly",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token",
+            "description": "Your bot token.Get from Botfather bot",
             "value": ""
         },
         "API_ID": {
@@ -21,9 +21,14 @@
             "value": ""
         },
         "API_KEY": {
-            "description": "(Not Compulsory) Cutt.ly API See Readme for further details",
+            "description": "Bitly API See Readme for further details",
+            "required": false
+        },
+       "OWNER": {
+            "description": "OWNER username without @",
             "required": false
         }
+
     },
     "addons": [],
     "buildpacks": [
