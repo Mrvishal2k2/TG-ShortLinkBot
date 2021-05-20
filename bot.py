@@ -55,11 +55,11 @@ def get_shortlink(url):
        if API_KEY:
            ''' Cuttly Shorten'''
            s = Shortener(api_key=API_KEY)
-           shortened_url = s.cuttly.short(link)
+           shortened_url = s.cuttly.short(url)
        else:
            ''' Da.gd : I prefer this '''
            s = Shortener()
-           shortened_url = s.dagd.short(link)
+           shortened_url = s.dagd.short(url)
     except Exception as error:
         Err = f"#ERROR: {error}"
         log.info(Err)
