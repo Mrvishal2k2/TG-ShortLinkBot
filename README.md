@@ -1,10 +1,10 @@
-# TG-ShortLinkBot
-Make a short link by using [Cutt.ly](https://cutt.ly/) API key Or With [Da.gd](https://da.gd) If API_KEY isn't present
+# TG-BitlyBot
+Make a short link by using [bit.ly](https://bit.ly/) API key Or With [Da.gd](https://da.gd) If API_KEY isn't present
 
 ### Installation
 
 #### Easy Way 
-Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites Support !!
+Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites and inline Support !!
 
 #### The Simple Way
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
@@ -21,8 +21,8 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites Support !!
  You can also get it from [UseTGXBot](https://t.me/UseTGXBot)
 * `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
  You can also get it from [UseTGXBot](https://t.me/UseTGXBot)
-* `API_KEY`: (Not Compulsory) Create [Cutt.ly](https://cutt.ly/) account then get this value from settings (I prefer desktop site 🙂)
- If API_KEY is not provided Still u can use with [Da.gd](https://da.gd) Shortlink (Preferably this is best 😅) !!
+* `API_KEY`: (Not Compulsory) Create [Bit.ly](https://bitly.com/a/sign_in) account then get this value from Profile settings > Generic access token
+ If API_KEY is not provided Still u can use with [Da.gd](https://da.gd) Shortlink !!
  
 ## All rights reserved !!
 * Kangers stay away from Kang !!
