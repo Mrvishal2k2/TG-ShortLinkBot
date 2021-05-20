@@ -1,5 +1,5 @@
 # TG-BitlyBot
-Make a short link by using [bit.ly](https://bit.ly/) API key Or With [Da.gd](https://da.gd) If API_KEY isn't present
+Make a short link by using [Bit.ly](https://bit.ly/) API key Or With [Da.gd](https://da.gd) If API_KEY isn't present
 
 ### Installation
 
@@ -21,9 +21,10 @@ Use [ShortLinkRobot](https://t.me/URLShortenRobot) with 10+ sites and inline Sup
  You can also get it from [UseTGXBot](https://t.me/UseTGXBot)
 * `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
  You can also get it from [UseTGXBot](https://t.me/UseTGXBot)
-* `API_KEY`: (Not Compulsory) Create [Bit.ly](https://bitly.com/a/sign_in) account then get this value from Profile settings > Generic access token
+* `BITLY_KEY`: (Not Compulsory) Create [Bit.ly](https://bitly.com/a/sign_in) account then get this value from Profile settings > Generic access token
  If API_KEY is not provided Still u can use with [Da.gd](https://da.gd) Shortlink !!
- 
+* `OWNER`: (Not mandatory) Owner's Username without @
+
 ## All rights reserved !!
 * Kangers stay away from Kang !!
 * Don't be a copy cat !!
