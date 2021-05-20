@@ -21,7 +21,7 @@
             "description": "Get this value from https://my.telegram.org",
             "value": ""
         },
-        "API_KEY": {
+        "BITLY_KEY": {
             "description": "Bitly API See Readme for further details",
             "required": false
         },
