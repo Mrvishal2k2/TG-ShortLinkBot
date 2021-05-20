@@ -67,4 +67,5 @@ def get_shortlink(url):
         
         
 if __name__ == "__main__" :
+    log.info(">>Bot-Started<<")
     SHORTLINKBOT.run()
