@@ -6,6 +6,7 @@ Should have to give credits 😏 else f***off
 This is only for personal use Dont use this for ur bot channel business 😂
 Thanks to Mahesh Malekar for his Gplinks Bot !!
 '''
+
 import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger(__name__)
@@ -53,9 +54,9 @@ def get_shortlink(url):
     Err = None
     try:
        if API_KEY:
-           ''' Cuttly Shorten'''
+           ''' Bittly Shorten'''
            s = Shortener(api_key=API_KEY)
-           shortened_url = s.cuttly.short(url)
+           shortened_url = s.bitly.short(url)
        else:
            ''' Da.gd : I prefer this '''
            s = Shortener()
