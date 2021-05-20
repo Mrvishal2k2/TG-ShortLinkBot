@@ -1,58 +1,73 @@
-# © All rights reserved by Mrvishal2k2
-# Kangers dont f*ckin kang this !!!
-# Should have to give credits 😏 else f***off 
-# This is only for personal use Dont use this for ur bot channel business 😂
-# Thanks to Mahesh Malekar for his Gplinks Bot !!
+'''
+© All rights reserved by Mrvishal2k2
 
-from os import environ
-# Moved Back to asyncio-dev branch of pyrogram
-from pyrogram import Client, Filters, InlineKeyboardButton, InlineKeyboardMarkup
-import pyshorteners
+Kangers dont f*ckin kang this !!!
+Should have to give credits 😏 else f***off 
+This is only for personal use Dont use this for ur bot channel business 😂
+Thanks to Mahesh Malekar for his Gplinks Bot !!
+'''
+import logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+log = logging.getLogger(__name__)
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-API_ID = environ.get('API_ID')
-API_HASH = environ.get('API_HASH')
-BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY')
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyshorteners import Shortener
+from config import *
 
-bot = Client('Shortlink bot',
+
+SHORTLINKBOT = Client('ShortlinkBot',
              api_id=API_ID,
              api_hash=API_HASH,
              bot_token=BOT_TOKEN,
              workers=50,
              sleep_threshold=10)
+             
+             
 
-
-@bot.on_message(Filters.command('start') & Filters.private)
+@SHORTLINKBOT.on_message(filters.command(['start','help']))
 async def start(bot, update):
+    owner = await bot.get_users(int(OWNER_ID))
+    owner_username = owner.username if owner.username else 'BotDunia'
+    markup = InlineKeyboardMarkup([[InlineKeyboardButton("My Owner 👮", url=f"https://t.me/{owner_username}")]])
+
     await update.reply(
         f"**Hi {update.chat.first_name}!**\n\n"
-        "I'm shortlink bot. Just send me link and get adsless short link")
+        "I'm shortlink bot. Just send me link and get adsless short link",
+        reply_markup=markup,
+        quote=True)
 
-
-@bot.on_message(Filters.regex(r'https?://[^\s]+') & Filters.private)
-async def link_handler(bot, update):
+@SHORTLINKBOT.on_message(filters.regex(r'https?://[^\s]+') & Filters.private)
+async def link_handler(_, update):
     link = update.matches[0].group(0)
-    if API_KEY:
-      try:
-        s = pyshorteners.Shortener(api_key=API_KEY) 
-        shortened_url = s.cuttly.short(link)
-        button = [[InlineKeyboardButton("Link 🔗", url=shortened_url)]]
-        markup = InlineKeyboardMarkup(button)
-        await update.reply_text(text=f'Here is your shortlink \n`{shortened_url}`', reply_markup=markup, quote=True)
-        
-      except Exception as e:
-        await update.reply(f'Error: {e}', quote=True)
-    else:
-      try:
-        s = pyshorteners.Shortener() 
-        shortened_url = s.dagd.short(link)
-        button = [[InlineKeyboardButton("Link 🔗", url=shortened_url)]]
-        markup = InlineKeyboardMarkup(button)
-        await update.reply_text(text=f'Here is your shortlink \n`{shortened_url}`', reply_markup=markup, quote=True)
-        
-      except Exception as e:
-        await update.reply(f'Error: {e}', quote=True)
-
+    shortened_url, Err = get_shortlink(link)
+    if shortened_url is None:
+        message = f"Something went wrong \n{Err}"
+        await update.reply(message, quote=True)
+        return
+    message = f"Here is your shortlink\n {shortened_url}"
+    markup = InlineKeyboardMarkup([[InlineKeyboardButton("Link 🔗", url=shortened_url)]])
+    # i don't think this bot with get sending message error so no need of exceptions
+    await update.reply_text(text=message, reply_markup=markup, quote=True)
       
-
-bot.run()
+def get_shortlink(url):
+    shortened_url = None
+    Err = None
+    try:
+       if API_KEY:
+           ''' Cuttly Shorten'''
+           s = Shortener(api_key=API_KEY)
+           shortened_url = s.cuttly.short(link)
+       else:
+           ''' Da.gd : I prefer this '''
+           s = Shortener()
+           shortened_url = s.dagd.short(link)
+    except Exception as error:
+        Err = f"#ERROR: {error}"
+        log.info(Err)
+    return shortened_url,Err
+        
+        
+if __name__ == "__main__" :
+    SHORTLINKBOT.run()
