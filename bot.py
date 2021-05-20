@@ -28,7 +28,7 @@ SHORTLINKBOT = Client('ShortlinkBot',
 
 @SHORTLINKBOT.on_message(filters.command(['start','help']))
 async def start(bot, update):
-    owner = await bot.get_users(int(OWNER_ID))
+    owner = await bot.get_users(int(OWNER))
     owner_username = owner.username if owner.username else 'BotDunia'
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("My Owner 👮", url=f"https://t.me/{owner_username}")]])
 
