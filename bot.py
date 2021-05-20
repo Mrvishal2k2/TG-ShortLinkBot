@@ -27,7 +27,7 @@ SHORTLINKBOT = Client('ShortlinkBot',
              
 
 @SHORTLINKBOT.on_message(filters.command(['start','help']))
-async def start(bot, update):
+async def start(_, update):
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("My Owner 👮", url=f"https://t.me/{OWNER}")]])
     await update.reply(
         f"**Hi {update.chat.first_name}!**\n\n"
