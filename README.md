@@ -34,7 +34,8 @@ start - start the bot
 help - ask help 
 ```
 
-### Support Group:
+### Support:
+[![Join BotDunia Channel](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/BotDunia)
 <a href="https://t.me/BotDuniaSupport"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a>
 
 ### Follow on:
