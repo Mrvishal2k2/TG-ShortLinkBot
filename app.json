@@ -7,6 +7,7 @@
     ],
     "website": "https://github.com/MrVishal2k2",
     "repository": "https://github.com/Mrvishal2k2/TG-ShortLinkBot/tree/Bitly",
+    "logo": "https://telegra.ph//file/b3461e7795bb258688623.jpg",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.Get from Botfather bot",
