@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(leve
 log = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyshorteners import Shortener
 from config import *
@@ -70,5 +70,8 @@ def get_shortlink(url):
         
         
 if __name__ == "__main__" :
+    SHORTLINKBOT.start()
     log.info(">>Bot-Started<<")
-    SHORTLINKBOT.run()
+    idle()
+    SHORTLINKBOT.stop()
+    log.info(">>Bot-Stopped<<")
