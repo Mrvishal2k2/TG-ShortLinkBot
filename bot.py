@@ -26,8 +26,8 @@ SHORTLINKBOT = Client('ShortlinkBot',
              bot_token=BOT_TOKEN,
              workers=50,
              sleep_threshold=10)
-             
-             
+
+
 
 @SHORTLINKBOT.on_message(filters.command(['start','help']))
 async def start(_, update):
@@ -50,7 +50,7 @@ async def link_handler(_, update):
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("Link 🔗", url=shortened_url)]])
     # i don't think this bot with get sending message error so no need of exceptions
     await update.reply_text(text=message, reply_markup=markup, quote=True)
-      
+
 def get_shortlink(url):
     shortened_url = None
     Err = None
@@ -63,12 +63,12 @@ def get_shortlink(url):
            ''' Da.gd : I prefer this '''
            s = Shortener()
            shortened_url = s.dagd.short(url)
-    except Exception as error:
+    except Exception as error:  # skipcq: PYL-W0703 - sometimes it can give error.
         Err = f"#ERROR: {error}"
         log.info(Err)
     return shortened_url,Err
-        
-        
+
+
 if __name__ == "__main__" :
     SHORTLINKBOT.start()
     log.info(">>Bot-Started<<")
