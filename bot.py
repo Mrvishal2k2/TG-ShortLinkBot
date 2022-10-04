@@ -28,7 +28,7 @@ SHORTLINKBOT = Client('ShortlinkBot',
              sleep_threshold=10)
 
 
-@SHORTLINKBOT.on_message(filters.command(['start','help']))
+@SHORTLINKBOT.on_message(filters.command(['start', 'help']))
 async def start(_, update):
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("My Owner 👮", url=f"https://t.me/{OWNER}")]])
     await update.reply(
@@ -67,7 +67,7 @@ def get_shortlink(url):
     except Exception as error:  # skipcq: PYL-W0703 - sometimes it can give error.
         Err = f"#ERROR: {error}"
         log.info(Err)
-    return shortened_url,Err
+    return shortened_url, Err
 
 
 if __name__ == "__main__" :
