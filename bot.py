@@ -17,7 +17,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyshorteners import Shortener
-from config import *
+from config import API_ID, API_HASH, BOT_TOKEN, BITLY_KEY, OWNER
 
 
 SHORTLINKBOT = Client('ShortlinkBot',
@@ -28,7 +28,6 @@ SHORTLINKBOT = Client('ShortlinkBot',
              sleep_threshold=10)
 
 
-
 @SHORTLINKBOT.on_message(filters.command(['start','help']))
 async def start(_, update):
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("My Owner 👮", url=f"https://t.me/{OWNER}")]])
@@ -37,6 +36,7 @@ async def start(_, update):
         "I'm shortlink bot. Just send me link and get adsless short link",
         reply_markup=markup,
         quote=True)
+
 
 @SHORTLINKBOT.on_message(filters.regex(r'https?://[^\s]+'))
 async def link_handler(_, update):
@@ -50,6 +50,7 @@ async def link_handler(_, update):
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("Link 🔗", url=shortened_url)]])
     # i don't think this bot with get sending message error so no need of exceptions
     await update.reply_text(text=message, reply_markup=markup, quote=True)
+
 
 def get_shortlink(url):
     shortened_url = None
