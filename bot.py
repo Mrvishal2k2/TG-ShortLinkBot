@@ -1,12 +1,12 @@
-'''
+"""
 Bitly Bot
 
 © All rights reserved by Mrvishal2k2
 Kangers dont f*ckin kang this !!!
-Should have to give credits 😏 else f***off 
+Should have to give credits 😏 else f***off
 This is only for personal use Dont use this for ur bot channel business 😂
 Thanks to Mahesh Malekar for his Gplinks Bot !!
-'''
+"""
 
 
 import logging
@@ -29,6 +29,7 @@ SHORTLINKBOT = Client('ShortlinkBot',
 
 @SHORTLINKBOT.on_message(filters.command(['start', 'help']))
 async def start(_, update):
+    """ Start Message """
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("My Owner 👮", url=f"https://t.me/{OWNER}")]])
     await update.reply(
             f"**Hi {update.chat.first_name}!**\n\n"
@@ -39,6 +40,7 @@ async def start(_, update):
 
 @SHORTLINKBOT.on_message(filters.regex(r'https?://[^\s]+'))
 async def link_handler(_, update):
+    """ Link Handler """
     link = update.matches[0].group(0)
     shortened_url, Err = get_shortlink(link)
     if shortened_url is None:
@@ -52,15 +54,16 @@ async def link_handler(_, update):
 
 
 def get_shortlink(url):
+    """ Get Shortlink """
     shortened_url = None
     Err = None
     try:
         if BITLY_KEY:
-            ''' Bittly Shorten'''
+            # Bittly Shorten
             s = Shortener(api_key=BITLY_KEY)
             shortened_url = s.bitly.short(url)
         else:
-            ''' Da.gd : I prefer this '''
+            # Da.gd : I prefer this
             s = Shortener()
             shortened_url = s.dagd.short(url)
     except Exception as error:  # skipcq: PYL-W0703 - sometimes it can give error.
