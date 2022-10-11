@@ -29,7 +29,7 @@ SHORTLINKBOT = Client('ShortlinkBot',
 
 @SHORTLINKBOT.on_message(filters.command(['start', 'help']))
 async def start(_, update):
-    """ Start Message """
+    """Start Message"""
     markup = InlineKeyboardMarkup([[InlineKeyboardButton("My Owner 👮", url=f"https://t.me/{OWNER}")]])
     await update.reply(
             f"**Hi {update.chat.first_name}!**\n\n"
@@ -40,7 +40,7 @@ async def start(_, update):
 
 @SHORTLINKBOT.on_message(filters.regex(r'https?://[^\s]+'))
 async def link_handler(_, update):
-    """ Link Handler """
+    """Link Handler"""
     link = update.matches[0].group(0)
     shortened_url, Err = get_shortlink(link)
     if shortened_url is None:
@@ -54,7 +54,7 @@ async def link_handler(_, update):
 
 
 def get_shortlink(url):
-    """ Get Shortlink """
+    """Get Shortlink"""
     shortened_url = None
     Err = None
     try:
