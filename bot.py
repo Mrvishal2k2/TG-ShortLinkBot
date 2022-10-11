@@ -2,7 +2,7 @@
 Bitly Bot
 
 © All rights reserved by Mrvishal2k2
-Kangers dont f*ckin kang this !!!
+Kangers don't f*ckin kang this !!!
 Should have to give credits 😏 else f***off
 This is only for personal use Dont use this for ur bot channel business 😂
 Thanks to Mahesh Malekar for his Gplinks Bot !!
@@ -48,7 +48,13 @@ async def link_handler(_, update):
         await update.reply(message, quote=True)
         return
     message = f"Here is your shortlink\n {shortened_url}"
-    markup = InlineKeyboardMarkup([[InlineKeyboardButton("Link 🔗", url=shortened_url)]])
+    markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("Open Link 🔗", url=shortened_url)
+                    ]
+                ]
+            )
     # i don't think this bot with get sending message error so no need of exceptions
     await update.reply_text(text=message, reply_markup=markup, quote=True)
 
